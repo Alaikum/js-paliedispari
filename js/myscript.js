@@ -10,7 +10,7 @@ console.log('Pali e Dispari')
 
 
 // faccio inserire la parola 
-const parola = prompt('Inserisci una parola')
+const parola = prompt('Inserisci una parola o una frase')
 
 // console.log(parola)
 
@@ -23,24 +23,51 @@ function isPalindrome(word) {
 
     // creo un array composto dalle lettere  da cui poi 
     // ottengo una stringa
-    let arrayWord = word.split('').join('')
+    let arrayWord = word.split('');
     // console.log(arrayWord)
+    let arrayNoSpaceWord = []
 
+    // trova e rimuove lo spazio 
+    for (let i = 0; i < arrayWord.length; i++) {
+        
+        if (arrayWord[i] != ' ') {
+            // console.log('trovato il non spazio')
+            arrayNoSpaceWord.push(arrayWord[i])
+        }
+        
+    }
+
+    arrayNoSpaceWord=arrayNoSpaceWord.join('')
+    console.log(arrayNoSpaceWord)
+
+   
     // creo l array di controllo  sempre dalla parola
     // perchè se lo copio eventuali modifiche moficano anche
     // l array originale , poi  ottengo la stringa
-    let arrayReverse = word.split('').reverse().join('');
+    let arrayReverse = word.split('').reverse();
+
+    let arrayNoSpaceReverse = []
+
+     // trova e rimuove lo spazio 
+     for (let i = 0; i < arrayReverse.length; i++) {
+        
+        if (arrayReverse[i] != ' ') {
+            // console.log('trovato il non spazio')
+            arrayNoSpaceReverse.push(arrayReverse[i])
+        }
+        
+    }
+
+    arrayNoSpaceReverse=arrayNoSpaceReverse.join('')
+    console.log(arrayNoSpaceReverse)
 
 
-    console.log(arrayWord)
-    console.log(arrayReverse)
-
-    if (arrayWord === arrayReverse) {
-        console.log('La parola è palindroma')
+    if (arrayNoSpaceWord === arrayNoSpaceReverse) {
+        console.log('La parola o la frase è palindroma')
         return;
     }
 
-    console.log('La parola non è palindroma')
+    console.log('La parola o la frase non è palindroma')
     return
 
 }
