@@ -17,3 +17,35 @@ console.log('Pali e Dispari')
 // Dichiariamo chi ha vinto.
 
 
+// faccio inserire la parola 
+const parola = prompt('Inserisci una parola')
+
+// console.log(parola)
+
+// lancio la funzione 
+isPalindrome(parola)
+
+function isPalindrome(word) {
+    // creo un array composto dalle lettere  da cui poi 
+    // ottengo una stringa
+    let arrayWord = word.split('').join('')
+    // console.log(arrayWord)
+
+    // creo l array di controllo  sempre dalla parola
+    // perchè se lo copio eventuali modifiche moficano anche
+    // l array originale , poi  ottengo la stringa
+    let arrayReverse = word.split('').reverse().join('');
+
+
+    console.log(arrayWord)
+    console.log(arrayReverse)
+
+    if (arrayWord === arrayReverse) {
+        console.log('La parola è palindroma')
+        return;
+    }
+
+    console.log('La parola non è palindroma')
+    return
+
+}
