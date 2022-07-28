@@ -29,18 +29,18 @@ function isPalindrome(word) {
 
     // trova e rimuove lo spazio 
     for (let i = 0; i < arrayWord.length; i++) {
-        
+
         if (arrayWord[i] != ' ') {
             // console.log('trovato il non spazio')
             arrayNoSpaceWord.push(arrayWord[i])
         }
-        
+
     }
 
-    arrayNoSpaceWord=arrayNoSpaceWord.join('')
+    arrayNoSpaceWord = arrayNoSpaceWord.join('')
     console.log(arrayNoSpaceWord)
 
-   
+
     // creo l array di controllo  sempre dalla parola
     // perchè se lo copio eventuali modifiche moficano anche
     // l array originale , poi  ottengo la stringa
@@ -48,17 +48,17 @@ function isPalindrome(word) {
 
     let arrayNoSpaceReverse = []
 
-     // trova e rimuove lo spazio 
-     for (let i = 0; i < arrayReverse.length; i++) {
-        
+    // trova e rimuove lo spazio 
+    for (let i = 0; i < arrayReverse.length; i++) {
+
         if (arrayReverse[i] != ' ') {
             // console.log('trovato il non spazio')
             arrayNoSpaceReverse.push(arrayReverse[i])
         }
-        
+
     }
 
-    arrayNoSpaceReverse=arrayNoSpaceReverse.join('')
+    arrayNoSpaceReverse = arrayNoSpaceReverse.join('')
     console.log(arrayNoSpaceReverse)
 
 
@@ -130,19 +130,24 @@ buttonElement.addEventListener('click', function () {
 
     let risultato = isEven(somma)
 
-
+    let esito =''
     // tre opzioni vittori con pariOdispari, vittoria con dispari
     // o sconfitta 
     if (sceltaGiocatore === 0 && risultato === true) {
-        console.log('hai vinto')
+        esito='Hai Vintoooooo!!!'
+        
 
     } else if (sceltaGiocatore === 1 && risultato === false) {
-        console.log('hai vinto')
+        esito='Hai Vintoooooo!!!'
+        
     } else {
-        console.log('hai perso')
+        esito='Hai perso schiappa!!!'
     }
+    console.log(esito)
 
+    const stampaAvideo = document.getElementById('risultato')
 
+    stampaAvideo.innerHTML =esito
 
 
 

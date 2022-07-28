@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5rem;
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.size{
+    font-size: 50px;
+    text-align: center;
+}
+
+#risultato{
+        font-size: 4rem;
+    color: crimson;
+}
